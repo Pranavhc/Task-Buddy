@@ -1,0 +1,9 @@
+- Basic structure ✓
+- Themes ✓
+- Add todo page
+- Todo model
+- Todo provider
+- Todo UI
+- Gridview of Todos
+- Adding / removing functionality
+ 
