@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 import 'package:todo_application/Pages/home.dart';
-import 'package:todo_application/Widgets/navigating_elevatedbutton.dart';
+import 'package:todo_application/Widgets/small_widgets.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class WelcomePage extends StatelessWidget {

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:todo_application/Utils/themes.dart';
+import 'package:todo_application/Widgets/small_widgets.dart';
 import 'package:velocity_x/src/extensions/string_ext.dart';
 import 'package:velocity_x/src/flutter/padding.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -22,7 +23,7 @@ class MyDrawer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  "Settings".text.xl.bold.make().p12(),
+                  "Settings".text.xl.bold.make(),
                   "Todo 1.0".text.size(16).light.caption(context).make().p12()
                 ],
               ),
@@ -35,7 +36,7 @@ class MyDrawer extends StatelessWidget {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  "Dark Mode".text.lg.bold.make().p12(),
+                  "Dark Mode".text.lg.bold.make(),
                   Switch.adaptive(
                     activeColor: Colors.deepPurpleAccent,
                     onChanged: (value) {
@@ -61,11 +62,14 @@ class MyDrawer extends StatelessWidget {
                       .bold
                       .make()
                       .pOnly(left: 16, bottom: 16),
-                  captionText("1. Tap on 'Add Task' to add a task"),
-                  captionText("2. Type Title and description of your task"),
-                  captionText("3. Tap on 'Save' to add it in your task list"),
-                  captionText("4. Tick task when you complete it."),
-                  captionText("5. Swipe to delete any task"), // Dissmissible
+                  CaptionText(string: "1. Tap on 'Add Task' to add a task"),
+                  CaptionText(
+                      string: "2. Type Title and description of your task"),
+                  CaptionText(
+                      string: "3. Tap on 'Save' to add it in your task list"),
+                  CaptionText(string: "4. Tick task when you complete it."),
+                  CaptionText(
+                      string: "5. Swipe to delete any task"), // Dissmissible
                 ],
               ),
             ),
@@ -73,9 +77,5 @@ class MyDrawer extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  Widget captionText(String string) {
-    return string.text.size(16).coolGray500.make().pOnly(left: 16, bottom: 16);
   }
 }
