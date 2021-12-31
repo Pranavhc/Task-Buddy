@@ -1,7 +1,17 @@
-// ignore_for_file: implementation_imports, prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors,ignore_for_file: implementation_imports, implementation_imports, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
 import 'package:velocity_x/src/extensions/string_ext.dart';
 import 'package:velocity_x/src/flutter/padding.dart';
+
+class CaptionText extends StatelessWidget {
+  const CaptionText({Key? key, required this.string}) : super(key: key);
+  final String string;
+
+  @override
+  Widget build(BuildContext context) {
+    return string.text.size(14).coolGray500.make().pOnly(left: 16, bottom: 16);
+  }
+}
 
 class NavigatingElevatedButton extends StatelessWidget {
   const NavigatingElevatedButton({

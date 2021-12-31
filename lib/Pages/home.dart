@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors, implementation_imports
 import 'package:flutter/material.dart';
-import 'package:todo_application/Widgets/navigating_elevatedbutton.dart';
+import 'package:todo_application/Pages/add_task_ui.dart';
+import 'package:todo_application/Widgets/small_widgets.dart';
+import 'package:todo_application/Widgets/task_list.dart';
 import 'package:velocity_x/src/extensions/string_ext.dart';
 import 'package:velocity_x/src/flutter/padding.dart';
 
@@ -45,9 +47,9 @@ class Home extends StatelessWidget {
             ],
           )),
       drawer: MyDrawer(),
-      // body: , "here the list will go"
+      body: TaskList(),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton:
-          NavigatingElevatedButton(location: null, string: "Add Task")
+          NavigatingElevatedButton(location: AddTaskUI(), string: "Add Task")
               .pOnly(bottom: 24));
 }
