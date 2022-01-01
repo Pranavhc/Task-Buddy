@@ -9,16 +9,21 @@ class TaskProvider extends ChangeNotifier {
     _tasks.add(task);
     notifyListeners();
   }
+
+  void deleteTask(Task task) {
+    _tasks.remove(task);
+    notifyListeners();
+  }
 }
 
 class Task {
   String title;
-  String desc;
-  String? id;
+  String? desc;
+  String id;
 
   Task({
     required this.title,
-    required this.desc,
-    this.id,
+    this.desc,
+    required this.id,
   });
 }

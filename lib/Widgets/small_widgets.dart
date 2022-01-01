@@ -25,8 +25,8 @@ class NavigatingElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
-      width: 150,
+      height: 40,
+      width: 120,
       padding: EdgeInsets.zero,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),

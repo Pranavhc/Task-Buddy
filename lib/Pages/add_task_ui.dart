@@ -32,7 +32,10 @@ class _AddTaskUIState extends State<AddTaskUI> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     IconButton(
-                      icon: Icon(CupertinoIcons.back),
+                      icon: Icon(
+                        CupertinoIcons.back,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
                       onPressed: () {
                         Navigator.pop(context);
                       },
@@ -40,7 +43,9 @@ class _AddTaskUIState extends State<AddTaskUI> {
                     ).p16(),
                     Text(
                       "Add Task",
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Theme.of(context).colorScheme.primary),
                       textAlign: TextAlign.center,
                     )
                   ],

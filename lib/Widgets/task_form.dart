@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -59,9 +59,27 @@ class TaskForm extends StatelessWidget {
       ).pOnly(left: 16, right: 16);
 
   Widget buildButton() => SizedBox(
-        child: ElevatedButton(
-          onPressed: onSavedTask,
-          child: "Save Task".text.make(),
+        child: Container(
+          height: 40,
+          width: 120,
+          padding: EdgeInsets.zero,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [Colors.cyan, Colors.deepPurpleAccent],
+              )),
+          child: ElevatedButton(
+            style: ButtonStyle(
+                shadowColor: MaterialStateProperty.all(Colors.transparent),
+                backgroundColor: MaterialStateProperty.all(Colors.transparent),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)))),
+            onPressed: onSavedTask,
+            child: "Save Task".text.bold.white.make(),
+          ),
         ),
       );
 }

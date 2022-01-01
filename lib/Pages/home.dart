@@ -37,10 +37,10 @@ class Home extends StatelessWidget {
                   .color(Theme.of(context).colorScheme.primary)
                   .make()
                   .p4(),
-              //tasks number should change, keeping it static for now.
+              // tasks number should change, keeping it static for now.
               "You have 0 tasks to complete."
                   .text
-                  .coolGray500
+                  .coolGray300
                   .lg
                   .caption(context)
                   .make(),

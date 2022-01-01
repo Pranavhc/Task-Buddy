@@ -23,7 +23,12 @@ class MyDrawer extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  "Settings".text.xl.bold.make(),
+                  "Settings"
+                      .text
+                      .xl
+                      .color(Theme.of(context).colorScheme.primary)
+                      .bold
+                      .make(),
                   "Todo 1.0".text.size(16).light.caption(context).make().p12()
                 ],
               ),
@@ -36,7 +41,12 @@ class MyDrawer extends StatelessWidget {
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  "Dark Mode".text.lg.bold.make(),
+                  "Dark Mode"
+                      .text
+                      .lg
+                      .color(Theme.of(context).colorScheme.primary)
+                      .bold
+                      .make(),
                   Switch.adaptive(
                     activeColor: Colors.deepPurpleAccent,
                     onChanged: (value) {
@@ -59,6 +69,7 @@ class MyDrawer extends StatelessWidget {
                   "How to Use ?"
                       .text
                       .lg
+                      .color(Theme.of(context).colorScheme.primary)
                       .bold
                       .make()
                       .pOnly(left: 16, bottom: 16),

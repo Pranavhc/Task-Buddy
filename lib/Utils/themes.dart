@@ -13,7 +13,7 @@ class ThemeProvider extends ChangeNotifier {
 
 class MyTheme {
   static Color lightBackground = Color(0xfff0f0f0);
-  static Color darkForeground = Color(0xff232323);
+  static Color darkForeground = Color(0xff373737);
 
   static ThemeData get lightTheme => ThemeData(
         primaryColorBrightness: Brightness.light,
@@ -21,7 +21,7 @@ class MyTheme {
         cardColor: lightBackground,
         colorScheme: ColorScheme.light(
           background: lightBackground,
-          primary: Colors.black,
+          primary: darkForeground,
         ),
       );
   static ThemeData get darkTheme => ThemeData(
