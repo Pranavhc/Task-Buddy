@@ -11,6 +11,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.center,
       decoration: BoxDecoration(
         backgroundBlendMode: BlendMode.color,
         gradient: LinearGradient(colors: [
@@ -24,7 +25,7 @@ class WelcomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/images/cat_walk2.gif'),
+            Image.asset('assets/images/cat_walk2.gif').centered(),
             "Hi there,".text.semiBold.black.xl2.make().p4(),
             "I'm your task buddy".text.color(Colors.white).bold.xl3.make().p4(),
             "Your task app to keep track of every thing you do"

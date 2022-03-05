@@ -37,6 +37,7 @@ class TaskList extends StatelessWidget {
             },
             physics: BouncingScrollPhysics(),
             crossAxisCount: 2,
+            clipBehavior: Clip.hardEdge,
             itemCount: tasks.length,
             mainAxisSpacing: 4,
             crossAxisSpacing: 4,
