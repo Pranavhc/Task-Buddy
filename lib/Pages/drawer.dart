@@ -78,9 +78,7 @@ class MyDrawer extends StatelessWidget {
                       string: "2. Type Title and description of your task"),
                   CaptionText(
                       string: "3. Tap on 'Save' to add it in your task list"),
-                  CaptionText(string: "4. Tick task when you complete it."),
-                  CaptionText(
-                      string: "5. Swipe to delete any task"), // Dissmissible
+                  CaptionText(string: "4. Long tap to delete any task"),
                 ],
               ),
             ),

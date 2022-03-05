@@ -1,7 +1,11 @@
-// ignore_for_file: prefer_const_constructors, implementation_imports
+// ignore_for_file: prefer_const_constructors, implementation_imports, unused_local_variable
+import 'dart:js';
+
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:todo_application/Pages/add_task_ui.dart';
 import 'package:todo_application/Widgets/small_widgets.dart';
+import 'package:todo_application/Widgets/task.dart';
 import 'package:todo_application/Widgets/task_list.dart';
 import 'package:velocity_x/src/extensions/string_ext.dart';
 import 'package:velocity_x/src/flutter/padding.dart';
@@ -37,8 +41,7 @@ class Home extends StatelessWidget {
                   .color(Theme.of(context).colorScheme.primary)
                   .make()
                   .p4(),
-              // tasks number should change, keeping it static for now.
-              "You have 0 tasks to complete."
+              "Keep adding, keep completing"
                   .text
                   .coolGray300
                   .lg

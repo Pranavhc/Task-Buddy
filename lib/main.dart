@@ -7,7 +7,8 @@ import 'package:todo_application/Utils/routes.dart';
 import 'package:todo_application/Utils/themes.dart';
 import 'package:todo_application/Widgets/task.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
